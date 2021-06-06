@@ -7,7 +7,7 @@ You can add proprietary features such as analysis.
 
 ## Migrate && Seed
 ```Go 
-go run ./cmd/servi/migrations/main.go
+go run ./cmd/database/migrations/main.go
 ```
 
 ## License
