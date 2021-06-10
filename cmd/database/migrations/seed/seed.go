@@ -7,6 +7,7 @@ import (
 	"gorm.io/gorm"
 )
 
+<<<<<<< HEAD
 func ProcessUsers(tx *gorm.DB, u *[]modelsV2.User) error {
 	return tx.Create(u).Error
 }
@@ -21,6 +22,8 @@ func ProcessUserTypes(tx *gorm.DB, u []string) error {
 	return tx.Create(userTypes).Error
 }
 
+=======
+>>>>>>> e44fe428e2750bbc1edf62da92fd337610f90487
 func ProcessQuiz(tx *gorm.DB, q *Quiz) error {
 	var err error
 
@@ -77,20 +80,27 @@ func ProcessQuiz(tx *gorm.DB, q *Quiz) error {
 	return nil
 }
 
+<<<<<<< HEAD
 // go build -i -o C:\Users\paolo\go\custom_output_dir
 
+=======
+>>>>>>> e44fe428e2750bbc1edf62da92fd337610f90487
 func Run(tx *gorm.DB) error {
 	fmt.Println("----------- Seeding -----------")
 
 	var err error
 	quiz := GetDataQuiz1()
+<<<<<<< HEAD
 	userTypes := GetUserTypes()
 	users := GetUsers()
+=======
+>>>>>>> e44fe428e2750bbc1edf62da92fd337610f90487
 
 	err = ProcessQuiz(tx, &quiz)
 	if err != nil {
 		return err
 	}
+<<<<<<< HEAD
 
 	err = ProcessUserTypes(tx, userTypes)
 	if err != nil {
@@ -102,5 +112,7 @@ func Run(tx *gorm.DB) error {
 		return err
 	}
 
+=======
+>>>>>>> e44fe428e2750bbc1edf62da92fd337610f90487
 	return nil
 }

@@ -414,8 +414,6 @@ func (u *User) ValidateTokenV2(roles []string) (int, string, error) {
 	// the end of this function
 	var userId int
 
-	// fmt.Println("u.Token", u.Token)
-
 	// Attempt to parse JWT
 	decrypted, err := UtilitiesString.ParseJWT(u.Token)
 

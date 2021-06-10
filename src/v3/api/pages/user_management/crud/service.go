@@ -57,4 +57,3 @@ func (s*ServiceImpl) ListUserTypes(d *controller_utils.Caller, p *controller_uti
 func (s*ServiceImpl) Login(p *RequestLogin) (*ResponseUserInfo, *error_utils.ApplicationError) {
 	return s.Repository.Login(p)
 }
-
