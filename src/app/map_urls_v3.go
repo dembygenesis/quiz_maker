@@ -19,15 +19,21 @@ func mapUrlsV3(app *fiber.App) {
 	caseAccessCrud := case_access.Initialize()
 	casesV2 := crud2.Initialize()
 	quiz := quiz.Initialize()
-	
+
+	// ========================================
 	// Quiz
 	api.Get("/quiz/:id",
-		// user.RoleMiddlewareV2([]string{"Admin"}),
+		user.RoleMiddlewareV2([]string{"Admin"}),
 		quiz.FetchQuiz)
 
 	api.Post("/quiz/:id",
-		// user.RoleMiddlewareV2([]string{"Admin"}),
+		user.RoleMiddlewareV2([]string{"Admin"}),
 		quiz.AnswerQuiz)
+
+	// END: Quiz
+	// ========================================
+
+
 
 	// Crud
 	api.Get("/user-management/crud", user.RoleMiddlewareV2([]string{"Admin"}), userManagementCrud.ListUsers)

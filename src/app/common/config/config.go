@@ -24,6 +24,7 @@ var InsertFailed = "INSERT_FAILED"
 var FetchSuccess = "FETCH_SUCCESS"
 var InsertSuccess = "INSERT_SUCCESS"
 var UpdateSuccess = "UPDATE_SUCCESS"
+var LoginSuccess = "Login_SUCCESS"
 var DeleteSuccess = "DELETE_SUCCESS"
 var DeleteFailed = "DELETE_FAILED"
 

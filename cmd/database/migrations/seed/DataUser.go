@@ -7,14 +7,24 @@ import (
 
 func GetUsers() *[]modelsV2.User {
 	var users []modelsV2.User
-	password, _ := string_utils.Encrypt("admin")
+	passwordAdmin, _ := string_utils.Encrypt("admin")
+	studentAdmin, _ := string_utils.Encrypt("student")
 	users = append(users, modelsV2.User{
 		UserTypeID: 1,
 		Email:      "coralim@yahoo.com",
 		FirstName:  "Cora",
 		LastName:   "Lim",
 		Gender:     "F",
-		Password:   password,
+		Password:   passwordAdmin,
+		Address:    "Tubod",
+	})
+	users = append(users, modelsV2.User{
+		UserTypeID: 1,
+		Email:      "student@gmail.com",
+		FirstName:  "Student First Name",
+		LastName:   "Student Last Name",
+		Gender:     "M",
+		Password:   studentAdmin,
 		Address:    "Tubod",
 	})
 	return &users

@@ -76,7 +76,7 @@ func (h *HandlerImpl) Login(c *fiber.Ctx) error {
 	if appError != nil {
 		return controller_utils.RespondError(c, config.InsertFailed, appError)
 	}
-	return controller_utils.Respond(c, config.InsertSuccess, "Successfully added the user", res)
+	return controller_utils.Respond(c, config.LoginSuccess, "Successful login", res)
 }
 
 
